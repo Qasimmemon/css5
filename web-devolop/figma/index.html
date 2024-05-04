@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <span style="margin-left: 30px;"></span>
+      <a class="navbar-brand" href="#"><img
+          src="data:image/jpeg;base64,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"
+          alt="" width="100px" height="100px" /></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <span style="margin-left: 400px;"></span>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Product</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Enterprice
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Over review</a></li>
+              <li><a class="dropdown-item" href="#">Contact sale </a></li>
+              <li><a class="dropdown-item" href="#"> Log in </a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Pricing</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Resourse
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Bolg</a></li>
+              <li><a class="dropdown-item" href="#">Temlete</a></li>
+              <li><a class="dropdown-item" href="#">Partner</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Community
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Event & live stream</a></li>
+              <li><a class="dropdown-item" href="#"> Education program </a></li>
+              <li><a class="dropdown-item" href="#"> User group</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">contact sale</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">log in</a>
+          </li>
+        </ul>
+        <button class="btn btn-outline-success me-2" type="button">Get started For Free </button>
+      </div>
+    </div>
+  </nav>
+  <br /> <br />
+  <h1 style="font-size: 40px; text-align: center;">How you design <i class="fa-solid fa-pen-nib"></i>, align , and build
+    <i class="fa-solid fa-code"></i>
+  </h1>
+  <h1 style="font-size: 40px; text-align: center;">matters. Do it together with Figma.</h1>
+  <div>
+    <button
+      style="margin-left: 300px;  background-color: rgb(55, 0, 255); color: white; border-radius: 10px; font-size: 30px;">Get
+      started for Free</button>
+  </div>
+  <img src="image/download (1).png" alt=""
+    style="margin-left: 50px;margin-bottom: 50px;margin-top: 50px;margin-right: 50px;">
+  <p style="font-size: larger; font-weight: bold; text-align: center; margin-top: 40px;">Trusted by teams at</p>
+  <div class="child" style="gap: 10px;">
+    <span>GitHub</span>
+    <span> Microsoft </span>
+    <span> Zoom </span>
+    <span> Logo</span>
+    <span>GitHub</span>
+    <span> Microsoft </span>
+    <span> Zoom </span>
+    <span> Logo</span>
+  </div>
+  <div class="grid" style="margin-top: 50px;">
+    <span class="left" style="color: rgb(0, 0, 0); margin: 100px ;  margin-left: 100px;">
+      <p style="margin-left: 100px;">Design</p>
+      <h1 style="margin-left: 100px;">Co-create in one space</h1>
+      <div class="grid_child">
+        <p style="margin-left: 100px;">Work together in real time and
+          empower designers to create in
+          new ways. Keep workflows
+          efficient with tools that give every
+          team visibility throughout
+          the process.</p>
+        <button style="margin-left: 100px;  background-color: black; color: white; border-radius: 10px;">Explore
+          Design</button>
+    </span>
+    <img src="image/fig.png" alt="" width="800px" height="600px"
+      style="margin-left: 400px; margin-top: -180px; border-radius: 10px;">
+  </div>
+  </div>
+  <div style="border: 1px solid black; height: 700px; display: ; background-color: lightpink;    border-left: 30px;
+  border-right: 30px;
+  border-top: 30px;">
+    <span style="margin-bottom: 50px;"></span>
+    <p style="font-weight: bold; margin-left: 200px;">Prototype</p>
+    <div style="font-weight: bold; margin-left: 200px;">
+      <h1>Make designs feel real</h1>
+    </div>
+    <p
+      style="border: 1px solid black; width: 300px; margin-left: 100px; border-left: 30px; border-right: 30px; border-top: 30px; border-bottom: 30px;">
+      Create realistic prototypes that allow for quick iteration on flows and states. Test the full, interactive
+      experience to get better feedback, sooner.</p><button
+      style="margin-left: 100px; border-radius: 10px; background-color: black; color: white;">Explore
+      Prototyping</button>
+    <img src="image/download.png" alt="" width="850px" height="600px" style="margin-left: 400px; margin-top: -150px;">
+    <div
+      style="border: 1px solid black;  border-left: 30px; border-right: 30px; border-top: 30px; background-color: green;">
+      <p style="margin-left: 200px;">Dev Mode <button
+          style="border-radius: 20px; background-color: yellow;">New</button></p>
+      <h1 style="margin-left: 200px;">Bring design and dev closer</h1>
+      <p
+        style="border: 1px solid black;  border-left: 30px; border-right: 30px; border-top: 30px; border-bottom: 30px; width: 300px; margin-left: 200px;">
+        Introducing Dev Mode, a new space in Figma for developers. Bring clarity to designs and give developers the
+        tools they need to translate them into code.</p>
+      <button style="margin-left: 200px; background-color: black; color: white; border-radius: 10px;">Explore Dev Mode
+      </button>
+      <img src="image/download (2).png" alt="" width="800px" height="600px"
+        style="margin-left: 500px;  margin-top: -150px;">
+    </div>
+    <div style="background-color: lightgrey;">
+      <p style="margin-left:200px;">Design system</p>
+      <h1 style="margin-left:200px;">Scale design and development</h1>
+      <div
+        style="border: 1px solid black; width: 300px; margin-left: 200px;  border-left: 30px; border-right: 30px; border-top: 30px; border-bottom: 30px;">
+        <p>
+          Save time and keep things consistent with reusable assets in shared libraries. Standardize components and
+          variables so that there’s more time for exploration, and less time doing busy work.
+        </p>
+      </div>
+      <button style="margin-left: 200px; background-color: black; color: white; border-radius: 10px;">Explore Design
+        System</button>
+      <div>
+        <img src="image/download (3).png" alt="" width="800px" height="600px"
+          style="margin-left: 550px; margin-top: -150px;">
+      </div>
+    </div>
+    <div style="background-color: lightblue;">
+      <p style="margin-left:200px;">FigJam </p>
+      <h1 style="margin-left:200px;">Align your team</h1>
+      <div
+        style="border: 1px solid black; border-left: 30px; border-right: 30px; border-top: 30px; border-bottom: 30px; width: 300px; margin-left: 200px;">
+        <p>FigJam is an online whiteboard where everyone who builds products can collaborate. Use it to bring your team
+          together in new ways, from kickoffs and stand ups to rituals and retros.</p>
+      </div>
+      <button
+        style="background-color: black; margin-left: 200px; background-color: black; color: white; border-radius: 10px;">Explore
+        figjam</button>
+      <div>
+        <img src="image/download (4).png" alt="" width="800px" height="600px"
+          style="margin-left: 500px; margin-top: -180px;">
+      </div>
+    </div>
+    <div style="background-color: black;">
+      <div
+        style="border: 1px solis black; width: 300px; color: rgb(255, 255, 255); margin-left: 200px; margin-top: 0px;">
+        <h1 style="margin-top: 0px;">Start building with Figma</h1>
+      </div>
+      <button
+        style=" margin-left: 800px; background-color: rgb(25, 0, 255); color: white; border-radius: 10px; font-size: 40px;">Get
+        started for free</button>
+      <div style="color: #ffffff; margin-left: 200px;">
+        <div> <i class="fa-brands fa-figma"></i> Figma </div>
+        <div> <i class="fa-brands fa-youtube"></i>youtube</div>
+        <div> <i class="fa-brands fa-instagram"></i> Instagaram</div>
+        <div> <i class="fa-brands fa-facebook"></i> Facebook</div>
+        <div> <i class="fa-brands fa-twitter"></i> X</div>
+      </div>
+      <div style="color: #ffffff; margin-left: 400px; margin-top: -120px;">
+        <div>
+          <h5>Uses class</h5>
+        </div>
+        <div> UI design</div>
+        <div> UX design</div>
+        <div> Wireframing</div>
+        <div> Diagramming</div>
+        <div> Brainstorming</div>
+        <div> Online whiteboard</div>
+        <div> Team collaboration</div>
+      </div>
+      <div style="color: #ffffff; margin-left: 600px; margin-top: -200px;">
+        <div>
+          <h5>Explore</h5>
+        </div>
+        <div> Design features</div>
+        <div> Prototyping features</div>
+        <div> Development Features</div>
+        <div> Collaboration features</div>
+        <div> Design process</div>
+        <div> FigJam</div>
+      </div>
+      <div style="margin-left: 600px; margin-top: 100px;">
+        <i class="fa-solid fa-globe"></i>English<i class="fa-solid fa-arrow-down"></i>
+      </div>
+    </div>
+</body>
+
+</html>
